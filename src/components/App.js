@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import ChildComponent from "./ChildComponent";
 
 const App = () => {
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
   return (
     <div>
         {/* Do not remove the main div */}
+        
+        {
+          isLoggedIn ? <p>You are logged in</p> : <ChildComponent isLoggedIn={isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
+        }
     </div>
   )
 }
