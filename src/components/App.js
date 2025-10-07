@@ -8,9 +8,9 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-        
+        <h1>Parent Component</h1>
         {
-          isLoggedIn ? <p>You are logged in</p> : <ChildComponent isLoggedIn={isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
+          isLoggedIn ? <p>You are logged in!</p> : <ChildComponent isLoggedIn={isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
         }
     </div>
   )
